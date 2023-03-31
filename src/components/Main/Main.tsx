@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { ReactComponent as GroupLessons } from "../../assets/groupLessons.svg";
 import LeftArrow from "../../assets/left_arrow.svg";
 import { Form } from "../Form/Form";
+import { CarouselSection } from "./CarouselSection/CarouselSection";
 
 export const Main = () => {
   return (
@@ -12,7 +13,7 @@ export const Main = () => {
         </Wrapper> */}
 
         <Title>Наши игры</Title>
-        <Carousel></Carousel>
+        <CarouselSection />
         <Info>
           <TextInfo>Мы делаем игры на функциональную грамотность</TextInfo>
           <GroupLessons />
@@ -39,8 +40,6 @@ const Img = styled.img({
   top: "183px",
 });
 
-
-
 const Container = styled.div({
   // backgroundColor: "#F7F7F8",
   width: "100%",
@@ -52,8 +51,6 @@ const Container = styled.div({
   gap: "60px",
   // justifyContent: "space-around",
 });
-
-const Carousel = styled.div({});
 
 const Info = styled.div({
   backgroundColor: "#F7F7F8",
