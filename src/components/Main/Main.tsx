@@ -38,6 +38,11 @@ const Img = styled.img({
   position: "absolute",
   right: "-172px",
   top: "183px",
+
+  "@media(max-width: 1580px)": {
+    display: "none",
+  },
+
 });
 
 const Container = styled.div({
