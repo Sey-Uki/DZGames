@@ -2,15 +2,23 @@ import styled from "styled-components";
 import A from "../../assets/A.svg";
 import GameImg from "../../assets/game.png";
 import { Form } from "../Form/Form";
+import { useNavigate } from "react-router-dom";
 
 export const Game = () => {
+
+  const navigate = useNavigate();
+
+  const handleNavigation = () => {
+    navigate('/about-game');
+  }
+
   return (
     <GameStyle>
       <Container>
         <Games>
           <Title>Наши игры</Title>
           <Cards>
-            <Card>
+            <Card onClick={handleNavigation}>
               <Img src={GameImg} />
               <CardText>
                 <CardTitle>Юнга Мур и большая стройка котов-пиратов</CardTitle>
@@ -19,7 +27,7 @@ export const Game = () => {
                 </CardDescription>
               </CardText>
             </Card>
-            <Card>
+            <Card onClick={handleNavigation}>
               <Img src={GameImg} />
               <CardText>
                 <CardTitle>Юнга Мур и большая стройка котов-пиратов</CardTitle>
@@ -28,7 +36,7 @@ export const Game = () => {
                 </CardDescription>
               </CardText>
             </Card>
-            <Card>
+            <Card onClick={handleNavigation}>
               <Img src={GameImg} />
               <CardText>
                 <CardTitle>Юнга Мур и большая стройка котов-пиратов</CardTitle>
