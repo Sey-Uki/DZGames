@@ -1,7 +1,10 @@
 import styled from "styled-components";
 
-import { ReactComponent as GroupLessons } from "../../assets/groupLessons.svg";
+import GroupLessons from "../../assets/groupLessons.svg";
 import LeftArrow from "../../assets/left_arrow.svg";
+import DoctorBg from "../../assets/doctor-bg.png";
+import DoctorBgSmall from "../../assets/doctor-bg-small.png";
+import Doctor from "../../assets/doctor.png";
 import { Form } from "../Form/Form";
 import { CarouselSection } from "./CarouselSection/CarouselSection";
 
@@ -16,7 +19,8 @@ export const Main = () => {
         <CarouselSection />
         <Info>
           <TextInfo>Мы делаем игры на функциональную грамотность</TextInfo>
-          <GroupLessons />
+          <BackgrundBlock />
+          <ImgDoctor src={Doctor} alt="Doctor" />
           <Img src={LeftArrow} />
         </Info>
           <Form text="У тебя есть идеи или вопросы? Напиши нам!" />
@@ -33,6 +37,43 @@ const MainStyle = styled.div({
   // position: "relative",
   gap: "60px",
 });
+
+const BackgrundBlock = styled.div`
+  background-image: url('${GroupLessons}');
+
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  background-position: right;
+
+  @media only screen and (max-width: 991px) {
+    background-image: url('${DoctorBg}');
+  }
+
+  @media only screen and (max-width: 768px) {
+    background-image: url('${DoctorBgSmall}');
+    background-size: cover;
+    background-position: top;
+    border-radius: 20px;
+  }
+`;
+
+const ImgDoctor = styled.img`
+  position: absolute;
+  right: 20px;
+  bottom: 0;
+  display: none;
+
+  @media only screen and (max-width: 991px) {
+    display: block;
+  }
+
+  @media only screen and (max-width: 768px) {
+    width: 200px;
+    right: auto;
+  }
+
+`;
 
 const Img = styled.img({
   position: "absolute",
@@ -65,6 +106,11 @@ const Info = styled.div({
   alignItems: "center",
   justifyContent: "space-between",
   position: "relative",
+
+  "@media(max-width: 768px)": {
+    flexDirection: "column",
+    height: "316px",
+  },
 });
 
 const TextInfo = styled.div({
@@ -72,6 +118,16 @@ const TextInfo = styled.div({
   fontSize: "30px",
   maxWidth: "516px",
   marginLeft: "48px",
+
+  "@media(max-width: 768px)": {
+    margin: 0,
+    padding: 20,
+    maxWidth: "none"
+  },
+
+  "@media(max-width: 491px)": {
+    fontSize: 24,
+  },
 });
 
 const Wrapper = styled.div({

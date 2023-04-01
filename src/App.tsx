@@ -13,7 +13,7 @@ function App() {
       <Main />  
       {/* <AboutUs /> */}
       {/* <AboutGame /> */}
-      <Game />
+      {/* <Game /> */}
       {/* <Footer /> */}
       {/* <Game /> */}
       <Footer />
