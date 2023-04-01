@@ -23,7 +23,7 @@ export const Header = () => {
           </Nav>
         </Wrapper>
         <ButtonWrapper>
-          <Button width="212px" text="Связаться с нами" />
+          <Button width="100%" text="Связаться с нами" />
         </ButtonWrapper>
         <div
           className={`menu-btn ${isOpenMenu ? "active" : ""}`}
@@ -80,7 +80,7 @@ const Container = styled.div({
   alignItems: "center",
   width: "100%",
   maxWidth: "1224px",
-  zIndex: "20",
+  zIndex: 500,
   backgroundColor: "#ffffff",
   height: "100%",
 
@@ -130,6 +130,7 @@ const Li = styled.li`
 `;
 
 const ButtonWrapper = styled.div({
+  width: 212,
   "@media(max-width: 820px)": {
     display: "none",
   },

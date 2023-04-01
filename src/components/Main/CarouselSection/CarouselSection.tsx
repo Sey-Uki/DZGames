@@ -175,10 +175,10 @@ const Left = styled.div`
   background-image: url('${bgImage}');
   background-repeat: no-repeat;
   background-position: right;
+  background-size: cover;
 
   @media only screen and (max-width: 1100px) {
     width: 50%;
-    background-size: cover;
   }
 
   @media only screen and (max-width: 820px) {
@@ -243,6 +243,7 @@ const Inner = styled.div`
 
   background-image: url('${sliderOpacity}');
   background-repeat: no-repeat;
+  background-size: cover;
 
   & button {
     margin-bottom: 40px;
@@ -250,7 +251,6 @@ const Inner = styled.div`
 
   @media only screen and (max-width: 1100px) {
     width: 50%;
-    background-size: cover;
   }
 
   @media only screen and (max-width: 690px) {

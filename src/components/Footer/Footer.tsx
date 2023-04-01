@@ -7,7 +7,7 @@ import { ReactComponent as Vb } from "../../assets/vb.svg";
 import { ReactComponent as Vk } from "../../assets/vk.svg";
 import { ReactComponent as Yt } from "../../assets/yt.svg";
 import { ReactComponent as Yn } from "../../assets/yn.svg";
-import { ReactComponent as Clouds } from "../../assets/clouds.svg";
+import clouds from "../../assets/clouds.svg";
 import { Button } from "../Button";
 
 import E from "../../assets/E.svg";
@@ -59,28 +59,26 @@ export const Footer = () => {
             <div>Условия использования</div>
           </TextWrapper>
         </Wrapper>
-        {/* <ImgW src={W} />
-      <ImgE src={E} /> */}
+        <ImgW src={W} />
+      <ImgE src={E} />
       </Container>
-      {/* <Img>
-        <Clouds />
-      </Img> */}
+      <Img />
     </FooterStyle>
   );
 };
 
-const FooterStyle = styled.footer({
-  display: "flex",
-  alignItems: "center",
-  flexDirection: "column",
-  width: "100%",
-  position: "relative",
-  marginTop: "120px",
+const FooterStyle = styled.footer`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  margin-top: 120px;
 
-  "@media(max-width: 1300px)": {
-    padding: "0 24px",
+  @media(max-width: 1300px): {
+    padding: 0 24px;
   },
-});
+`;
 
 const Container = styled.div({
   backgroundColor: "#F7F7F8",
@@ -170,11 +168,18 @@ const Icons = styled.div({
   gap: "8px",
 });
 
-const Img = styled.div({
-  position: "absolute",
-  top: "190px",
-  overflow: "hidden",
-});
+const Img = styled.div`
+  position: absolute;
+  bottom: -150px;
+  overflow: hidden;
+
+  width: 103%;
+  height: 100%;
+
+  background-image: url('${clouds}');
+  background-repeat: no-repeat;
+  background-position: bottom center;
+`;
 
 const Tel = styled.a({
   fontSize: "18px",
