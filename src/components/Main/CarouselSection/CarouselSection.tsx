@@ -1,9 +1,7 @@
 import styled from 'styled-components';
 import bgImage from '../../../assets/slider-bg.png';
 import bgImageMedium from '../../../assets/slider-bg-medium.png';
-import bgImageSmall from '../../../assets/slider-bg-small.png';
 import sliderOpacity from '../../../assets/slider-opacity.png';
-import sliderOpacitySmall from '../../../assets/slider-opacity-small.png';
 import { Carousel } from 'react-responsive-carousel';
 import { Button } from '../../Button';
 import { useEffect } from 'react';
@@ -260,8 +258,6 @@ const Inner = styled.div`
     height: 378px;
 
     border-radius: 0 0 20px 20px;
-
-    /* background-image: url('${sliderOpacitySmall}'); */
   }
 `;
 
