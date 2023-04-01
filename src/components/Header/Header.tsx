@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 import { Button } from "../Button";
+import { NavLink } from "react-router-dom";
 
 export const Header = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
@@ -8,11 +9,17 @@ export const Header = () => {
     <HeaderStyle>
       <Container>
         <Wrapper>
-          <Logo>DZGames</Logo>
+          <Logo>
+            <NavLink to="/">DZGames</NavLink>
+          </Logo>
           <Line></Line>
           <Nav>
-            <Li>Игры</Li>
-            <Li>О нас</Li>
+            <Li>
+              <NavLink to="/game">Игры</NavLink>
+            </Li>
+            <Li>
+              <NavLink to="/about-us">О нас</NavLink>
+            </Li>
           </Nav>
         </Wrapper>
         <ButtonWrapper>
@@ -30,8 +37,22 @@ export const Header = () => {
       <div className={`menu ${isOpenMenu ? "active" : ""}`}>
         <nav>
           <ul>
-            <Li>Игры</Li>
-            <Li>О нас</Li>
+            <Li>
+              <NavLink
+                className={({ isActive }) => (isActive ? "active" : "")}
+                to="/game"
+              >
+                Игры
+              </NavLink>
+            </Li>
+            <Li>
+              <NavLink
+                className={({ isActive }) => (isActive ? "active" : "")}
+                to="/about-us"
+              >
+                О нас
+              </NavLink>
+            </Li>
           </ul>
         </nav>
         <Button width="212px" text="Связаться с нами" />
@@ -99,10 +120,14 @@ const Nav = styled.ul({
   },
 });
 
-const Li = styled.li({
-  color: "#0B0D22",
-  listStyleType: "none",
-});
+const Li = styled.li`
+  color: #0b0d22;
+  list-style-type: none;
+
+  & a.active {
+    border-bottom: 2px solid #ffa000;
+  }
+`;
 
 const ButtonWrapper = styled.div({
   "@media(max-width: 820px)": {
