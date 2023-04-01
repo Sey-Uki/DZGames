@@ -97,7 +97,13 @@ const Cards = styled.div({
   },
 });
 
-const Card = styled.div({});
+const Card = styled.div({
+  ":hover": {
+    boxShadow: "16px 16px 0px #FFCD4C",
+    borderRadius: "20px",
+    transition: "0.5s",
+  }
+});
 
 const CardText = styled.div({
   width: "100%",
