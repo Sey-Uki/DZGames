@@ -6,7 +6,7 @@ import BlockLeftImg720 from '../../assets/blockLeft720.png';
 
 export const Form = ({
   text,
-  withMessage,
+  withMessage = true,
   submitText
 }: {
   text: string;

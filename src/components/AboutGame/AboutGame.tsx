@@ -224,6 +224,7 @@ export const AboutGame = () => {
         <div className='relative '>
           <Title>Стань частью нашей команды</Title>
           <Form
+            withMessage={false}
             submitText='Подписаться'
             text='Хочешь получать актуальные новости о наших играх? Тогда смело подписывайся на рассылку!'
           />
@@ -315,6 +316,11 @@ const ImplementLi = styled.li`
     position: absolute;
     left: -40px;
   }
+
+  @media only screen and (max-width: 820px) {
+    font-size: 24px;
+  }
+
   @media (max-width: 700px) {
     align-items: flex-start;
   }
@@ -325,6 +331,10 @@ const ImplementsTitle = styled.div({
   marginBottom: '24px',
   fontSize: '30px',
   fontWeight: '600',
+
+  '@media(max-width: 820px)': {
+    fontSize: '24px',
+  },
 
   '@media(max-width: 700px)': {
     marginBottom: '12px',
@@ -477,11 +487,10 @@ const ImgS = styled.img({
   position: 'absolute',
   right: '-46px',
   top: '-51px',
-  transform: 'rotate(322deg)',
 
   '@media(max-width: 1340px)': {
     top: '-20px',
-    right: '-20px',
+    right: '-18px',
   },
 });
 
@@ -554,9 +563,9 @@ const Description = styled.div({
   fontSize: '30px',
   marginBottom: '24px',
 
-  '@media(max-width: 700px)': {
+  '@media(max-width: 820px)': {
     marginBottom: '12px',
-    fontSize: '24px',
+    fontSize: '18px',
   },
 });
 
@@ -615,14 +624,14 @@ const Query = styled.div({
 
 const Interview = styled.div({
   position: 'absolute',
-  top: '50%',
   left: '50%',
-  marginLeft: '-300px',
-  marginTop: '-64px',
+  transform: "translateX(-50%)",
+  top: "20px",
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-  width: '600px',
+  maxWidth: '600px',
+  width: "100%",
 
   '@media(max-width: 685px)': {
     top: '0',
@@ -636,8 +645,8 @@ const InterviewTitle = styled.div({
   marginBottom: '32px',
   textAlign: 'center',
 
-  '@media(max-width: 685px)': {
-    width: '300px',
+  '@media(max-width: 820px)': {
+    fontSize: '32px',
   },
 });
 
