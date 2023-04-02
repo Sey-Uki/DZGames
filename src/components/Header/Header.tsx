@@ -67,7 +67,7 @@ const HeaderStyle = styled.header({
   alignItems: "center",
   justifyContent: "center",
   width: "100%",
-  marginBottom: "60px",
+  marginBottom: "40px",
 
   "@media(max-width: 820px)": {
     height: "52px",

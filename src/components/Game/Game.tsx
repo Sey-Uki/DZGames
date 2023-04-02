@@ -3,6 +3,7 @@ import A from "../../assets/A.svg";
 import GameImg from "../../assets/game.png";
 import { Form } from "../Form/Form";
 import { useNavigate } from "react-router-dom";
+import { MainTitle } from "../MainTitle/MainTitle";
 
 export const Game = () => {
 
@@ -16,7 +17,7 @@ export const Game = () => {
     <GameStyle>
       <Container>
         <Games>
-          <Title>Наши игры</Title>
+          <MainTitle text="Наши игры" />
           <Cards>
             <Card onClick={handleNavigation}>
               <Img src={GameImg} />
@@ -39,7 +40,9 @@ export const Game = () => {
             <Card onClick={handleNavigation}>
               <Img src={GameImg} />
               <CardText>
-                <CardTitle>Юнга Мур и большая стройка котов-пиратов</CardTitle>
+                <CardTitle
+                  
+                >Юнга Мур и большая стройка котов-пиратов</CardTitle>
                 <CardDescription>
                   Описание игры Описание игры Описание игры Описание игры
                 </CardDescription>
@@ -50,7 +53,7 @@ export const Game = () => {
 
         <div className="relative ">
           <Form text="У тебя есть идеи или вопросы? Напиши нам!" />
-          <ImgA src={A} />
+          <ImgA className="asideButton" src={A} />
         </div>
       </Container>
     </GameStyle>
@@ -62,7 +65,7 @@ const GameStyle = styled.div({
   alignItems: "center",
   flexDirection: "column",
   width: "100%",
-  gap: "60px",
+  gap: "25px",
 });
 
 const Container = styled.div({
@@ -71,10 +74,6 @@ const Container = styled.div({
   display: "flex",
   flexDirection: "column",
   gap: "76px",
-
-  "@media(max-width: 1300px)": {
-    padding: "0 24px",
-  },
 });
 
 const Games = styled.div({
@@ -89,6 +88,11 @@ const ImgA = styled.img({
   position: "absolute",
   bottom: "-47px",
   left: "-56px",
+
+  "@media(max-width: 1340px)": {
+    bottom: "-15px",
+    left: "-10px",
+  },
 });
 
 const Cards = styled.div({
@@ -106,11 +110,17 @@ const Cards = styled.div({
 });
 
 const Card = styled.div({
+  cursor: "pointer",
   ":hover": {
     boxShadow: "16px 16px 0px #FFCD4C",
     borderRadius: "20px",
     transition: "0.5s",
-  }
+  },
+
+  "@media(max-width: 1024px)": {
+    boxShadow: "16px 16px 0px #FFCD4C",
+    borderRadius: "20px",
+  },
 });
 
 const CardText = styled.div({
@@ -131,7 +141,11 @@ const CardText = styled.div({
 const CardTitle = styled.div({
   fontSize: "30px",
   fontWeight: "600",
-  maxWidth: "296px"
+  maxWidth: "296px",
+
+  "@media(max-width: 820px)": {
+    fontSize: "24px",
+  },
 });
 
 const CardDescription = styled.div({

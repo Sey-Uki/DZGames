@@ -47,6 +47,10 @@ body {
   font-style: normal;
 }
 
+#root {
+  position: relative;
+}
+
 .App {
   padding: 0 20px;
 }
@@ -109,7 +113,6 @@ button:focus-visible {
 .relative {
   position: relative;
 }
-
 
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -233,6 +236,14 @@ button:focus-visible {
   }
 } */
 
+@media(max-width: 1340px) {
+
+  .asideButton {
+    width: 50px;
+  }
+
+}
+
 @media(max-width: 820px) {
 
   .menu-btn {
@@ -251,7 +262,7 @@ button:focus-visible {
 
 @media(max-width: 650px) {
   .footer .size {
-    width: 280px;
+    width: 100%;
   }
 
   .gap {

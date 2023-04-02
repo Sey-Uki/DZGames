@@ -59,10 +59,9 @@ export const Footer = () => {
             <div>Условия использования</div>
           </TextWrapper>
         </Wrapper>
-        <ImgW src={W} />
-      <ImgE src={E} />
+      <ImgW className="asideButton" src={W} />
+      <ImgE className="asideButton" src={E} />
       </Container>
-      <Img />
     </FooterStyle>
   );
 };
@@ -75,9 +74,9 @@ const FooterStyle = styled.footer`
   position: relative;
   margin-top: 120px;
 
-  @media(max-width: 1300px): {
-    padding: 0 24px;
-  },
+  @media(max-width: 820px) {
+    margin-top: 50px;
+  }
 `;
 
 const Container = styled.div({
@@ -95,12 +94,9 @@ const Container = styled.div({
     padding: "0 24px",
   },
 
-  // "@media(max-width: 820px)": {
-  //   height: "660px",
-  //   Top: "32px",
-  //   gap: "32px",
-  //   justifyContent: "flex-start",
-  // },
+  "@media(max-width: 991px)": {
+    padding: "0 24px 50px 24px",
+  },
 
   "@media(max-width: 650px)": {
     height: "660px",
@@ -142,8 +138,9 @@ const Wrapper = styled.div({
 
   "@media(max-width: 650px)": {
     flexDirection: "column",
-    alignItems: "center",
+    alignItems: "flex-start",
     gap: "24px",
+    width: "100%",
   },
 });
 
@@ -151,6 +148,7 @@ const TextWrapper = styled.div({
   display: "flex",
   justifyContent: "space-between",
   gap: "48px",
+  padding: "0 10px",
 
   "@media(max-width: 920px)": {
     gap: "8px",
@@ -167,20 +165,6 @@ const Icons = styled.div({
   display: "flex",
   gap: "8px",
 });
-
-const Img = styled.div`
-  position: absolute;
-  bottom: -150px;
-  overflow: hidden;
-
-  width: 103%;
-  height: 100%;
-
-  background-image: url('${clouds}');
-  background-repeat: no-repeat;
-  background-position: bottom center;
-`;
-
 const Tel = styled.a({
   fontSize: "18px",
   fontWeight: "600",
@@ -213,12 +197,33 @@ const ImgE = styled.img({
   position: "absolute",
   bottom: "134px",
   left: "-56px",
+
+  "@media(max-width: 1340px)": {
+    left: "-18px",
+  },
+
+  "@media(max-width: 820px)": {
+    bottom: "0",
+  },
+
+  "@media(max-width: 655px)": {
+    bottom: "35px",
+  },
+
+  "@media(max-width: 368px)": {
+    bottom: "10px",
+  },
 });
 
 const ImgW = styled.img({
   position: "absolute",
   top: "-47px",
   right: "-56px",
+
+  "@media(max-width: 1340px)": {
+    top: "-20px",
+    right: "-18px",
+  },
 });
 
 const Block = styled.div({

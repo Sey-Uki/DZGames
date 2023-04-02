@@ -7,6 +7,7 @@ import DoctorBgSmall from "../../assets/doctor-bg-small.png";
 import Doctor from "../../assets/doctor.png";
 import { Form } from "../Form/Form";
 import { CarouselSection } from "./CarouselSection/CarouselSection";
+import { MainTitle } from "../MainTitle/MainTitle";
 
 export const Main = () => {
   return (
@@ -15,7 +16,7 @@ export const Main = () => {
         {/* <Wrapper>
         </Wrapper> */}
 
-        <Title>Наши игры</Title>
+        <MainTitle text="Наши игры" noMargin />
         <CarouselSection />
         <Info>
           <TextInfo>Мы делаем игры на функциональную грамотность</TextInfo>
@@ -94,8 +95,8 @@ const Container = styled.div({
   // borderRadius: "20px",
   display: "flex",
   flexDirection: "column",
-  gap: "60px",
   // justifyContent: "space-around",
+  gap: "40px"
 });
 
 const Info = styled.div({
@@ -136,8 +137,4 @@ const Wrapper = styled.div({
   maxWidth: "1128px",
   width: "100%",
   margin: "0 auto",
-});
-
-const Title = styled.h1({
-  margin: "0",
 });

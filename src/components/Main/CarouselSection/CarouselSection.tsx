@@ -93,7 +93,7 @@ export const CarouselSection = () => {
   );
 };
 
-const Container = styled.section`
+const Container = styled.div`
   width: 100%;
   overflow: hidden;
 
@@ -169,6 +169,7 @@ const Left = styled.div`
   display: flex;
   flex: 1;
   height: 100%;
+  overflow: hidden;
 
   border-radius: 20px 0 0 20px;
 
@@ -280,5 +281,11 @@ const Wrapper = styled.div`
     font-size: 18px;
     line-height: 132%;
     text-align: left;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+   -webkit-line-clamp: 5; /* number of lines to show */
+   -webkit-box-orient: vertical;
   }
 `;
