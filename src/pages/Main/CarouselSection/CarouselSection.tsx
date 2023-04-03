@@ -3,7 +3,7 @@ import bgImage from '../../../assets/slider-bg.png';
 import bgImageMedium from '../../../assets/slider-bg-medium.png';
 import sliderOpacity from '../../../assets/slider-opacity.png';
 import { Carousel } from 'react-responsive-carousel';
-import { Button } from '../../Button';
+import { Button } from '../../../components/Button/Button';
 import { useEffect } from 'react';
 
 const INTERVAL = 6000;

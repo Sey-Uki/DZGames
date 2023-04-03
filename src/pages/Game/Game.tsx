@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 import A from '../../assets/A.svg';
 import GameImg from '../../assets/game.png';
-import { Form } from '../Form/Form';
+import { Form } from '../../components/Form/Form';
 import { useNavigate } from 'react-router-dom';
-import { MainTitle } from '../MainTitle/MainTitle';
+import { MainTitle } from '../../components/MainTitle/MainTitle';
 
 export const Game = () => {
   const navigate = useNavigate();

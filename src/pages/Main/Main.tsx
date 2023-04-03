@@ -5,9 +5,9 @@ import LeftArrow from "../../assets/left_arrow.svg";
 import DoctorBg from "../../assets/doctor-bg.png";
 import DoctorBgSmall from "../../assets/doctor-bg-small.png";
 import Doctor from "../../assets/doctor.png";
-import { Form } from "../Form/Form";
+import { Form } from "../../components/Form/Form";
 import { CarouselSection } from "./CarouselSection/CarouselSection";
-import { MainTitle } from "../MainTitle/MainTitle";
+import { MainTitle } from "../../components/MainTitle/MainTitle";
 
 export const Main = () => {
   return (

@@ -8,7 +8,7 @@ import { ReactComponent as Vk } from "../../assets/vk.svg";
 import { ReactComponent as Yt } from "../../assets/yt.svg";
 import { ReactComponent as Yn } from "../../assets/yn.svg";
 import clouds from "../../assets/clouds.svg";
-import { Button } from "../Button";
+import { Button } from "../Button/Button";
 
 import E from "../../assets/E.svg";
 import W from "../../assets/W.svg";
