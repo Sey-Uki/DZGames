@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { Button } from "../Button";
+import { Button } from "../Button/Button";
 import { NavLink } from "react-router-dom";
 
 export const Header = () => {

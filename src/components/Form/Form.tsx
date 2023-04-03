@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Button } from '../Button';
+import { Button } from '../Button/Button';
 
 import BlockLeftImg from '../../assets/blockLeft.png';
 import BlockLeftImg720 from '../../assets/blockLeft720.png';

@@ -1,8 +1,8 @@
 import { Navigate, Route, Routes } from "react-router-dom";
-import { Main } from "./components/Main/Main";
-import { AboutUs } from "./components/AboutUs/AboutUs";
-import { AboutGame } from "./components/AboutGame/AboutGame";
-import { Game } from "./components/Game/Game";
+import { Main } from "./pages/Main/Main";
+import { AboutUs } from "./pages/AboutUs/AboutUs";
+import { AboutGame } from "./pages/AboutGame/AboutGame";
+import { Game } from "./pages/Game/Game";
 
 export const AppRoutes = () => {
   return (

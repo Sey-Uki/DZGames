@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const SubTitle = ({
   text,
@@ -11,7 +11,7 @@ export const SubTitle = ({
 };
 
 const StyledTitle = styled.h2<{ fontSize?: number }>`
-  font-size: ${({ fontSize }) => (fontSize && `${fontSize}px`) || '40px'};
+  font-size: ${({ fontSize }) => (fontSize && `${fontSize}px`) || "40px"};
   font-weight: 600;
   color: #0b0d22;
 
