@@ -95,7 +95,6 @@ const ImgA = styled.img({
 const Cards = styled.div({
   display: 'flex',
   gap: '24px',
-  // flexWrap: "wrap",
 
   '@media(max-width: 1024px)': {
     flexWrap: 'wrap',
