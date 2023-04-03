@@ -115,10 +115,6 @@ const ImgCaptain760 = styled.img({
   "@media(max-width: 685px)": {
     display: "none",
   },
-
-  // "@media(max-width: 694px)": {
-  //   display: "none",
-  // },
 });
 
 const ImgCatQuery760 = styled.img({

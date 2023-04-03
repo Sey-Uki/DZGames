@@ -90,8 +90,6 @@ const BannerDescriptionBlock = styled.div({
 
   "@media(max-width: 520px)": {
     height: "408px",
-    // paddingBottom: "0",
-    // paddingTop: "0",
   },
 });
 

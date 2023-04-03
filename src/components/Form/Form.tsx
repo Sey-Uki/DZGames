@@ -133,7 +133,6 @@ const Text = styled.div({
   top: '48px',
   fontSize: '40px',
   fontWeight: '600',
-  // maxWidth: "516px",
   marginLeft: '48px',
   marginRight: '48px',
 

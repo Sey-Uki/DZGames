@@ -35,7 +35,6 @@ const MainStyle = styled.div({
   alignItems: "center",
   flexDirection: "column",
   width: "100%",
-  // position: "relative",
   gap: "60px",
 });
 
@@ -88,14 +87,10 @@ const Img = styled.img({
 });
 
 const Container = styled.div({
-  // backgroundColor: "#F7F7F8",
   width: "100%",
   maxWidth: "1224px",
-  // height: "442px",
-  // borderRadius: "20px",
   display: "flex",
   flexDirection: "column",
-  // justifyContent: "space-around",
   gap: "40px"
 });
 
