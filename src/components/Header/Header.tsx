@@ -69,8 +69,16 @@ const HeaderStyle = styled.header({
   width: "100%",
   marginBottom: "40px",
 
+  position: "fixed",
+  zIndex: "200",
+  marginLeft: "-20px",
+  paddingLeft: "20px",
+  paddingRight: "20px",
+
   "@media(max-width: 820px)": {
     height: "52px",
+    paddingLeft: "0",
+    paddingRight: "0",
   },
 });
 
@@ -84,8 +92,10 @@ const Container = styled.div({
   backgroundColor: "#ffffff",
   height: "100%",
 
+
   "@media(max-width: 820px)": {
-    margin: "0 20px",
+    paddingLeft: "20px",
+    paddingRight: "20px",
   },
 });
 
@@ -99,6 +109,7 @@ export const Logo = styled.div({
   color: "#000000",
   fontWeight: "700",
   fontSize: "32px",
+  fontFamily: "Jost",
 });
 
 const Line = styled.div({

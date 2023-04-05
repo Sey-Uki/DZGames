@@ -9,6 +9,8 @@ import { MiniBlock } from "./MiniBlock/MiniBlock";
 import { Learn } from "./Learn/Learn";
 import { SubTitle } from "../../components/SubTitle/SubTitle";
 
+import D from "../../assets/D.svg";
+
 export const AboutGame = () => {
   return (
     <AboutGameStyle>
@@ -30,13 +32,14 @@ export const AboutGame = () => {
         />
         <Query />
 
-        <div>
-          <SubTitle text="Стань частью нашей команды" />
+        <div className="relative">
+          <SubTitle text="Подписывайся на новости о наших игрых" />
           <Form
             withMessage={false}
             submitText="Подписаться"
             text="Хочешь получать актуальные новости о наших играх? Тогда смело подписывайся на рассылку!"
           />
+          <ImgD className="asideButton" src={D} />
         </div>
       </Container>
     </AboutGameStyle>
@@ -48,7 +51,6 @@ const AboutGameStyle = styled.div({
   alignItems: "center",
   flexDirection: "column",
   width: "100%",
-  gap: "25px",
 });
 
 const Container = styled.div({
@@ -56,5 +58,16 @@ const Container = styled.div({
   maxWidth: "1224px",
   display: "flex",
   flexDirection: "column",
-  gap: "25px",
+  gap: "30px",
+});
+
+const ImgD = styled.img({
+  position: "absolute",
+  left: "-46px",
+  bottom: "-51px",
+
+  "@media(max-width: 1340px)": {
+    bottom: "-20px",
+    left: "-18px",
+  },
 });

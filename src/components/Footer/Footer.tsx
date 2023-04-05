@@ -95,8 +95,8 @@ const Container = styled.div({
   },
 
   "@media(max-width: 991px)": {
-    padding: "0 24px 50px 24px",
-  },
+    padding: "48px 24px",
+  },  
 
   "@media(max-width: 650px)": {
     height: "660px",
@@ -113,6 +113,7 @@ const Ul = styled.ul({
   flexDirection: "column",
   padding: "0",
   margin: "0",
+  gap: "8px",
 });
 
 const Li = styled.li({
