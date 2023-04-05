@@ -9,36 +9,36 @@ import { Description } from "../../../components/Description/Description";
 
 export const MiniBlock = () => {
   return (
-    <>
+    <div>
       <SubTitle text="Что тебя ждет в игре" />
       <Wrapper>
         <GrayBlockMini>
           <Description
             text="Просторная карта, на которой можно весело провести время"
-            fontSize={24}
+            fontSize820={24}
           />
           <Img src={Map} />
         </GrayBlockMini>
         <GrayBlockMini>
           <Description
             text="Надежные друзья, которые помогут в решении задач"
-            fontSize={24}
+            fontSize820={24}
           />
           <Img src={Cat} />
         </GrayBlockMini>
         <GrayBlockMini>
           <Description
             text="Интересные задачи, которые предстоит решить"
-            fontSize={24}
+            fontSize820={24}
           />
           <Img src={Science} />
         </GrayBlockMini>
         <GrayBlockMini>
-          <Description text="Бонусы и градострой" fontSize={24} />
+          <Description text="Бонусы и градострой" fontSize820={24} />
           <Img src={House} />
         </GrayBlockMini>
       </Wrapper>
-    </>
+    </div>
   );
 };
 

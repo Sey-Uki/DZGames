@@ -21,7 +21,7 @@ const StyledButton = styled.button<{ width: string; withMargin?: boolean }>`
   border: none;
   max-width: ${({ width }) => width};
   width: 100%;
-  height: 50px;
+  min-height: 50px;
   color: #ffffff;
   display: flex;
   align-items: center;

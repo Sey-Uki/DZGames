@@ -6,9 +6,10 @@ import { Description } from "../../../components/Description/Description";
 
 export const Info = () => {
   return (
-    <>
+    <div>
       <SubTitle text="Методическая информация" />
       <Description
+      fontSize820={24}
         text="
         Wake: Tales from the Aqualab нацелен на научные практики NGSS, связанные
         с экспериментами, моделированием и аргументацией. Инструменты, которые
@@ -95,7 +96,7 @@ export const Info = () => {
         <ImgS className="asideButton" src={S} />
         <ImgLeft src={LeftArrow} />
       </Implements>
-    </>
+    </div>
   );
 };
 
@@ -104,6 +105,7 @@ const Implements = styled.div({
   padding: "48px 60px",
   background: "#F7F7F8",
   borderRadius: "20px",
+  marginTop: "24px",
 
   "@media(max-width: 700px)": {
     padding: "12px 8px 24px 8px",

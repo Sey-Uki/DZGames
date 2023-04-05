@@ -18,11 +18,11 @@ export const GrayBlock = ({
   isImg?: boolean;
 }) => {
   return (
-    <>
+    <div>
       {isMainTitle ? <MainTitle text={title} /> : <SubTitle text={title} />}
       <GrayBlockStyle>
-        <Description text={description} />
-        <Description text={description} />
+        <Description fontSize={18} text={description} />
+        <Description fontSize={18} text={description} />
       </GrayBlockStyle>
       {isImg && (
         <>
@@ -30,7 +30,7 @@ export const GrayBlock = ({
           <Img src={RightArrow} />
         </>
       )}
-    </>
+    </div>
   );
 };
 
