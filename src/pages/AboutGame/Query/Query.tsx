@@ -69,20 +69,20 @@ const InterviewTitle = styled.div({
   },
 });
 
-const InterviewBtns = styled.div({
-  display: "flex",
-  width: "100%",
-  gap: "24px",
+const InterviewBtns = styled.div`
+  display: flex;
+  width: 100%;
+  gap: 24px;
 
-  "@media(max-width: 685px)": {
-    gap: "12px",
-    flexDirection: "column",
-    alignItems: "center",
-  },
-});
+  @media(max-width: 685px) {
+    gap: 12px;
+    flex-direction: column;
+    align-items: center;
+  };
+`
 
 const InterviewBtn = styled.button({
-  background: "#FFF3E8",
+  backgroundColor: "#FFF3E8",
   border: "none",
   height: "50px",
   maxWidth: "288px",
@@ -92,6 +92,17 @@ const InterviewBtn = styled.button({
   color: "#FFA000",
   fontSize: "18px",
   fontWeight: "600",
+  transition: '.2s',
+
+  "&:hover": {
+    backgroundColor: '#FFA000',
+    color: 'white',
+  },
+
+  "&:active": {
+    backgroundColor: '#FF7001',
+    color: 'white',
+  }
 });
 
 const ImgCaptain = styled.img({
