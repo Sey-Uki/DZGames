@@ -1,10 +1,10 @@
-import styled from "styled-components";
-import { SubTitle } from "../SubTitle/SubTitle";
-import { Description } from "../Description/Description";
-import { MainTitle } from "../MainTitle/MainTitle";
+import styled from 'styled-components';
+import { SubTitle } from '../SubTitle/SubTitle';
+import { Description } from '../Description/Description';
+import { MainTitle } from '../MainTitle/MainTitle';
 
-import S from "../../assets/S.svg";
-import RightArrow from "../../assets/right_arrow.svg";
+import S from '../../assets/S.svg';
+import RightArrow from '../../assets/right_arrow.svg';
 
 export const GrayBlock = ({
   title,
@@ -23,51 +23,51 @@ export const GrayBlock = ({
       <GrayBlockStyle>
         <Description fontSize={18} text={description} />
         <Description fontSize={18} text={description} />
+        {isImg && (
+          <>
+            <ImgS className='asideButton' src={S} />
+            <Img src={RightArrow} />
+          </>
+        )}
       </GrayBlockStyle>
-      {isImg && (
-        <>
-          <ImgS className="asideButton" src={S} />
-          <Img src={RightArrow} />
-        </>
-      )}
     </div>
   );
 };
 
 const GrayBlockStyle = styled.div({
-  width: "100%",
-  maxWidth: "1224px",
-  padding: "48px 104px",
-  backgroundColor: "#F7F7F8",
-  borderRadius: "20px",
-  display: "flex",
-  gap: "12px",
-  flexDirection: "column",
-  position: "relative",
+  width: '100%',
+  maxWidth: '1224px',
+  padding: '48px 104px',
+  backgroundColor: '#F7F7F8',
+  borderRadius: '20px',
+  display: 'flex',
+  gap: '12px',
+  flexDirection: 'column',
+  position: 'relative',
 
-  "@media(max-width: 1024px)": {
-    padding: "24px",
+  '@media(max-width: 1024px)': {
+    padding: '24px',
   },
 });
 
 const ImgS = styled.img({
-  position: "absolute",
-  right: "-46px",
-  top: "-51px",
-  transform: "rotate(322deg)",
+  position: 'absolute',
+  right: '-46px',
+  top: '-51px',
+  transform: 'rotate(322deg)',
 
-  "@media(max-width: 1340px)": {
-    right: "-10px",
-    top: "-23px",
+  '@media(max-width: 1340px)': {
+    right: '-10px',
+    top: '-23px',
   },
 });
 
 const Img = styled.img({
-  position: "absolute",
-  left: "-172px",
-  top: "123px",
+  position: 'absolute',
+  left: '-172px',
+  top: '123px',
 
-  "@media(max-width: 1580px)": {
-    display: "none",
+  '@media(max-width: 1580px)': {
+    display: 'none',
   },
 });

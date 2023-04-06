@@ -9,7 +9,6 @@ import { useEffect } from 'react';
 const INTERVAL = 6000;
 
 export const CarouselSection = () => {
-
   useEffect(() => {
     const dots = document.querySelector('.carousel .control-dots');
     const backBlock = document.querySelector('.backBlock .backRight');
@@ -17,7 +16,7 @@ export const CarouselSection = () => {
     if (dots && backBlock) {
       backBlock.append(dots);
     }
-  }, [])
+  }, []);
 
   return (
     <Container>
@@ -30,7 +29,7 @@ export const CarouselSection = () => {
         showStatus={false}
         showArrows={false}
         interval={INTERVAL}
-        autoPlay
+        // autoPlay
         infiniteLoop
         emulateTouch
         renderIndicator={(
@@ -102,7 +101,6 @@ const Container = styled.div`
   @media only screen and (max-width: 690px) {
     height: auto;
   }
-
 `;
 
 const BackgroundBlock = styled.div`
@@ -130,18 +128,27 @@ const BackgroundBlock = styled.div`
   & .backRight {
     height: 100%;
     width: 520px;
-
     position: relative;
+    padding: 96px 48px 48px 48px;
+    display: flex;
   }
 
   @media only screen and (max-width: 1100px) {
-    & .backRight, & .backLeft {
+    & .backRight,
+    & .backLeft {
       width: 50%;
     }
   }
 
+  @media only screen and (max-width: 820px) {
+    & .backRight {
+      padding: 86px 24px 38px 24px;
+    }
+  }
+
   @media only screen and (max-width: 690px) {
-    & .backRight, & .backLeft {
+    & .backRight,
+    & .backLeft {
       width: 100%;
     }
 
@@ -195,7 +202,6 @@ const Left = styled.div`
 
     background-image: url('${bgImage}');
   }
-
 `;
 
 const CustomIndicator = styled.button<{
@@ -233,7 +239,7 @@ const CustomIndicator = styled.button<{
 const Inner = styled.div`
   height: 100%;
   width: 520px;
-  padding: 80px 30px 0 30px;
+  padding: 96px 48px 48px 48px;
   border-radius: 0 20px 20px 0;
 
   display: flex;
@@ -246,30 +252,32 @@ const Inner = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
 
-  & button {
-    margin-bottom: 40px;
-  }
-
   @media only screen and (max-width: 1100px) {
     width: 50%;
+  }
+
+  @media only screen and (max-width: 820px) {
+    padding: 86px 24px 38px 24px;
   }
 
   @media only screen and (max-width: 690px) {
     width: 100%;
     height: 378px;
 
+    padding: 52px 24px 24px 24px;
+
     border-radius: 0 0 20px 20px;
   }
 `;
 
 const Wrapper = styled.div`
-
   & h2 {
     font-weight: 600;
     font-size: 30px;
     line-height: 100%;
     text-align: left;
     margin-top: 0;
+    margin-bottom: 0;
 
     @media only screen and (max-width: 820px) {
       font-size: 24px;
@@ -282,10 +290,22 @@ const Wrapper = styled.div`
     line-height: 132%;
     text-align: left;
 
+    margin-bottom: 30px;
+    margin-top: 12px;
+
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-   -webkit-line-clamp: 5; /* number of lines to show */
-   -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+
+    @media only screen and (max-width: 820px) {
+      margin-bottom: 48px;
+    }
+
+    @media only screen and (max-width: 690px) {
+      margin-bottom: 24px;
+      -webkit-line-clamp: 7;
+    }
   }
 `;
