@@ -87,6 +87,11 @@ const Container = styled.div({
   display: "flex",
   flexDirection: "column",
   gap: "30px",
+  marginTop: "140px",
+
+  "@media(max-width: 820px)": {
+    marginTop: "72px",
+  },
 
   "@media(max-width: 600px)": {
     gap: "0",
@@ -105,8 +110,7 @@ const ImgA = styled.img({
 });
 
 const GrayBlockMini = styled.div({
-  width: "100%",
-  maxWidth: "392px",
+  width: "calc(33.3% - 26px)",
   padding: "24px 24px",
   backgroundColor: "#F7F7F8",
   borderRadius: "20px",
@@ -114,13 +118,22 @@ const GrayBlockMini = styled.div({
   display: "flex",
   gap: "12px",
   flexDirection: "column",
+  marginRight: 26,
+  marginBottom: 30,
+
+  "@media(max-width: 991px)": {
+    width: "calc(50% - 26px)",
+  },
+
+  "@media(max-width: 650px)": {
+    width: "100%",
+  },
 });
 
 const Wrapper = styled.div({
   display: "flex",
   flexWrap: "wrap",
   justifyContent: "center",
-  gap: "24px",
 });
 
 const BlockTitle = styled.div({
