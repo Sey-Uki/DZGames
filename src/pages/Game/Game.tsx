@@ -73,6 +73,11 @@ const Container = styled.div({
   display: "flex",
   flexDirection: "column",
   gap: "76px",
+  marginTop: "140px",
+
+  "@media(max-width: 820px)": {
+    marginTop: "72px",
+  },
 
   "@media(max-width: 600px)": {
     gap: "60px",

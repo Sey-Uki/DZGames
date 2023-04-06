@@ -18,7 +18,7 @@ export const Main = () => {
   return (
     <MainStyle>
       <Container>
-        <div className="relative">
+        <div style={{ marginTop: 60 }} className="relative">
           <MainTitle text="Наши игры" />
           <CarouselSection />
           <ImgR src={RightArrow} />
@@ -137,7 +137,7 @@ const Container = styled.div({
   display: "flex",
   flexDirection: "column",
   gap: "60px",
-  marginTop: "72px",
+  marginTop: "80px",
 
   "@media(max-width: 600px)": {
     gap: "30px",

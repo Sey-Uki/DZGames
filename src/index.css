@@ -183,7 +183,7 @@ button:focus-visible {
 .menu {
   display: none;
   position: absolute;
-  top: 52px;
+  top: 53px;
   left: 0;
   width: 100%;
   padding-top: 44px;
@@ -199,6 +199,7 @@ button:focus-visible {
 .menu.active {
   transform: translateY(0);
   z-index: 100;
+  top: 52px;
 }
 
 .menu ul {
@@ -214,15 +215,14 @@ button:focus-visible {
 .backRight .control-dots {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   width: 100%;
   height: max-content;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 30px;
+  top: 48px;
   position: absolute;
   z-index: 100;
   padding: 0;
+  margin: 0;
 }
 
 @media(min-width: 820px) {
@@ -255,10 +255,20 @@ button:focus-visible {
     display: flex;
   }
 
+  .backRight .control-dots {
+    top: 38px;
+  }
+
   .footer .size {
     width: 33.3%;
   }
 
+}
+
+@media(max-width: 690px) {
+  .backRight .control-dots {
+    top: 24px;
+  }
 }
 
 @media(max-width: 650px) {
