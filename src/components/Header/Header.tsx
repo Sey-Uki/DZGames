@@ -39,6 +39,7 @@ export const Header = () => {
           <ul>
             <Li>
               <NavLink
+                onClick={() => setIsOpenMenu(false)}
                 className={({ isActive }) => (isActive ? "active" : "")}
                 to="/game"
               >
@@ -47,6 +48,7 @@ export const Header = () => {
             </Li>
             <Li>
               <NavLink
+                onClick={() => setIsOpenMenu(false)}
                 className={({ isActive }) => (isActive ? "active" : "")}
                 to="/about-us"
               >
@@ -69,13 +71,14 @@ const HeaderStyle = styled.header({
   width: "100%",
   marginBottom: "40px",
 
-  position: "fixed",
+  position: "absolute",
   zIndex: "200",
   marginLeft: "-20px",
   paddingLeft: "20px",
   paddingRight: "20px",
 
   "@media(max-width: 820px)": {
+    position: "fixed",
     height: "52px",
     paddingLeft: "0",
     paddingRight: "0",
@@ -91,7 +94,6 @@ const Container = styled.div({
   zIndex: 500,
   backgroundColor: "#ffffff",
   height: "100%",
-
 
   "@media(max-width: 820px)": {
     paddingLeft: "20px",

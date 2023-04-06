@@ -50,7 +50,7 @@ export const Game = () => {
         </Games>
 
         <div className="relative ">
-          <SubTitle text="Задавай вопросы и делись идеями" />
+          <Title><SubTitle text="Задавай вопросы и делись идеями" /></Title>
           <Form text="У тебя есть идеи или вопросы? Напиши нам!" />
           <ImgA className="asideButton" src={A} />
         </div>
@@ -65,6 +65,13 @@ const GameStyle = styled.div({
   flexDirection: "column",
   width: "100%",
   gap: "25px",
+});
+
+const Title = styled.div({
+  display: "none",
+  "@media(max-width: 650px)": {
+    display: "block",
+  },
 });
 
 const Container = styled.div({
@@ -160,11 +167,4 @@ const CardTitle = styled.div({
 const CardDescription = styled.div({
   fontSize: "18px",
   maxWidth: "296px",
-});
-
-const Title = styled.div({
-  fontSize: "40px",
-  fontWeight: "600",
-  color: "#0B0D22",
-  marginBottom: "24px",
 });
