@@ -33,7 +33,7 @@ export const AboutGame = () => {
         <Query />
 
         <div className="relative">
-          <SubTitle text="Подписывайся на новости о наших игрых" />
+        <Title><SubTitle text="Подписывайся на новости о наших игрых" /></Title>
           <Form
             withMessage={false}
             submitText="Подписаться"
@@ -51,6 +51,13 @@ const AboutGameStyle = styled.div({
   alignItems: "center",
   flexDirection: "column",
   width: "100%",
+});
+
+const Title = styled.div({
+  display: "none",
+  "@media(max-width: 650px)": {
+    display: "block",
+  },
 });
 
 const Container = styled.div({

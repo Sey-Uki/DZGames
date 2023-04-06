@@ -3,9 +3,6 @@ import styled from "styled-components";
 import GroupLessons from "../../assets/groupLessons.svg";
 import LeftArrow from "../../assets/left_arrow.svg";
 import RightArrow from "../../assets/right_arrow.svg";
-import DoctorBg from "../../assets/doctor-bg.png";
-import DoctorBgSmall from "../../assets/doctor-bg-small.png";
-import Doctor from "../../assets/doctor.png";
 import { Form } from "../../components/Form/Form";
 import { CarouselSection } from "./CarouselSection/CarouselSection";
 import { MainTitle } from "../../components/MainTitle/MainTitle";
@@ -27,12 +24,11 @@ export const Main = () => {
         <Info>
           <TextInfo>Мы делаем игры на функциональную грамотность</TextInfo>
           <BackgrundBlock src={GroupLessons} />
-          {/* <ImgDoctor src={Doctor} alt="Doctor" /> */}
           <ImgL src={LeftArrow} />
           <ImgA className="asideButton" src={A} />
         </Info>
         <div>
-          <SubTitle text="Задавай вопросы и делись идеями" />
+          <Title><SubTitle text="Задавай вопросы и делись идеями" /></Title>
           <Form text="У тебя есть идеи или вопросы? Напиши нам!" />
         </div>
       </Container>
@@ -47,25 +43,15 @@ const MainStyle = styled.div({
   width: "100%",
 });
 
+const Title = styled.div({
+  display: "none",
+  "@media(max-width: 650px)": {
+    display: "block",
+  },
+});
+
 const BackgrundBlock = styled.img`
   width: 50%;
-  /* background-image: url("${GroupLessons}");
-
-  background-repeat: no-repeat;
-  width: 50%;
-  height: 100%;
-  background-position: right; */
-
-  /* @media only screen and (max-width: 991px) {
-    background-image: url("${DoctorBg}");
-  }
-
-  @media only screen and (max-width: 768px) {
-    background-image: url("${DoctorBgSmall}");
-    background-size: cover;
-    background-position: top;
-    border-radius: 20px;
-  } */
 
   @media only screen and (max-width: 768px) {
     height: 180px;

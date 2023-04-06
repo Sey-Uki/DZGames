@@ -117,10 +117,6 @@ const FormBlock = styled.div({
   height: "388px",
   display: "flex",
 
-  "@media(max-width: 1220px)": {
-    height: "100%",
-  },
-
   "@media(max-width: 991px)": {
     flexDirection: "column",
   },
@@ -138,7 +134,7 @@ const BlockLeft = styled.div({
     width: "100%",
   },
 
-  "@media(max-width: 600px)": {
+  "@media(max-width: 650px)": {
     display: "none",
   },
 });
