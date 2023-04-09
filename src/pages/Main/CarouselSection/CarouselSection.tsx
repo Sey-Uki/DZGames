@@ -29,7 +29,7 @@ export const CarouselSection = () => {
         showStatus={false}
         showArrows={false}
         interval={INTERVAL}
-        // autoPlay
+        autoPlay
         infiniteLoop
         emulateTouch
         renderIndicator={(
